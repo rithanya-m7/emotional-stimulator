@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Emotion Detection AI</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <input type="file" name="image" required>
+
+            <br><br>
+
+            <button type="submit">Detect Emotion</button>
+
+        </form>
+
+        {% if emotion %}
+
+            <h2>Detected Emotion: {{ emotion }}</h2>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
